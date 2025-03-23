@@ -26,7 +26,7 @@ const Header = () => {
 
                 </div>
 
-                <a href="#contact" className="btn btn-decondary max-md:hidden md:justify-self-end">
+                <a href="#contact" className="btn btn-secondary max-md:hidden md:justify-self-end">
                     Contactame
                 </a>
 
