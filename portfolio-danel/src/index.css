@@ -10,6 +10,11 @@ html {
 body {
     @apply bg-zinc-900 text-zinc-50
 }
+
+.logo img {
+  filter: invert(1);
+}
+
 /* typography */
 
 .headline-1

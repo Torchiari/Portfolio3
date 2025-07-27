@@ -34,13 +34,13 @@ const Navbar = ({ navOpen }) => {
 
     const navItems = [
         {
-            label: 'Home',
+            label: 'Inicio',
             link: '#home',
             className: 'nav-link active',
             ref: lastActiveLink
         },
         {
-            label: 'About',
+            label: 'Sobre mi',
             link: '#about',
             className: 'nav-link'
         },
