@@ -1,4 +1,4 @@
-import { ButtonPrimary, ButtonOutline} from "./Button";
+import { ButtonPrimary, ButtonOutline } from "./Button";
 
 const Hero = () => {
     return (
@@ -28,20 +28,20 @@ const Hero = () => {
                     </h2>
 
                     <div className="flex items-center gap-3">
-                        <ButtonPrimary label="Descargar CV" icon="download"/>
-
-                        {/* <ButtonOutline
-                        href="#about"
-                        label="Bajar"
-                        icon="arrow_downward"
-                        /> */}
+                        <a
+                            href="/CV_Danel_Torchiari.pdf"
+                            download
+                        >
+                            <ButtonPrimary label="Descargar CV" icon="download" />
+                        </a>
                     </div>
+
 
                 </div>
 
                 <div className="hidden lg:block">
-                    <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
-                        <img src="/images/hero-banner.png" width={656} height={800} alt="Danel Torchiari" className="w-full" />
+                    <figure className="w-100 max-w-[350px] ml-500 bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-75% rounded-[60px] overflow-hidden">
+                        <img src="/images/hero-banner.png" width={656} height={800} alt="Danel Torchiari" className="" />
                     </figure>
                 </div>
 

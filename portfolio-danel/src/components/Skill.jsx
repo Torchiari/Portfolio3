@@ -4,17 +4,17 @@ const skillItem = [
   {
     imgSrc: '/images/figma.svg',
     label: 'Figma',
-    desc: 'Design tool'
+    desc: 'Herramienta de diseño'
   },
   {
     imgSrc: '/images/css3.svg',
     label: 'CSS',
-    desc: 'User Interface'
+    desc: 'Interfaz de usuario'
   },
   {
     imgSrc: '/images/javascript.svg',
     label: 'JavaScript',
-    desc: 'Interaction'
+    desc: 'Interacción'
   },
   {
     imgSrc: '/images/nodejs.svg',
@@ -29,7 +29,7 @@ const skillItem = [
   {
     imgSrc: '/images/mongodb.svg',
     label: 'MongoDB',
-    desc: 'Database'
+    desc: 'Base de datos'
   },
   {
     imgSrc: '/images/react.svg',
@@ -39,7 +39,7 @@ const skillItem = [
   {
     imgSrc: '/images/tailwindcss.svg',
     label: 'TailwindCSS',
-    desc: 'User Interface'
+    desc: 'Interfaz de usuario'
   },
 ];
 
