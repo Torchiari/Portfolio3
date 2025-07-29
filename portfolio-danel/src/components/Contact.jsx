@@ -91,7 +91,7 @@ const Contact = () => {
                 <ul>
                   {sitemap.map(({ label, href }, key) => (
                     <li key={key}>
-                      <a href={href} target="_blank" className="block text-lg text-zinc-400 py-1 transition-colors hover:text-zinc-200">{label}</a>
+                      <a href={href} className="block text-lg text-zinc-400 py-1 transition-colors hover:text-zinc-200">{label}</a>
                     </li>
 
                   ))}
