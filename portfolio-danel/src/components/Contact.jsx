@@ -1,118 +1,80 @@
-const sitemap = [
-  {
-    label: 'Inicio',
-    href: '#home'
-  },
-  {
-    label: 'Sobre mi',
-    href: '#about'
-  },
-  // {
-  //   label: 'Work',
-  //   href: '#work'
-  // },
-  // {
-  //   label: 'Reviews',
-  //   href: '#reviews'
-  // },
-  // {
-  //   label: 'Contact me',
-  //   href: '#contact'
-  // }
-];
+import React from 'react';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+// Eliminamos el sitemap ya que no se usará aquí
 
 const socials = [
   {
     label: 'GitHub',
-    href: 'https://github.com/Torchiari'
+    href: 'https://github.com/Torchiari',
+    icon: <FaGithub />,
+    username: 'Torchiari'
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/daneltorchiari/'
+    href: 'https://www.linkedin.com/in/daneltorchiari/',
+    icon: <FaLinkedinIn />,
+    username: 'daneltorchiari'
   },
-   {
-    label: 'Gmail',
-    href: 'mailto:danel.t@hotmail.com?subject=Consulta%20desde%20tu%20portfolio&body=Hola%20Danel%2C%20vi%20tu%20portfolio%20y%20me%20gustaría%20contactarte.'
+  {
+    label: 'Email',
+    href: 'mailto:danel.t@hotmail.com?subject=Consulta%20desde%20tu%20portfolio&body=Hola%20Danel%2C%20vi%20tu%20portfolio%20y%20me%20gustaría%20contactarte.',
+    icon: <MdEmail />,
+    username: 'danel.t@hotmail.com'
   }
-  // {
-  //   label: 'Twitter X',
-  //   href: 'https://x.com/codewithsadee_'
-  // },
-  // {
-  //   label: 'Instagram',
-  //   href: 'https://www.instagram.com/daneltorchiari/'
-  // },
-  // {
-  //   label: 'CodePen',
-  //   href: 'https://codepen.io/codewithsadee'
-  // }
 ];
-
 
 const Contact = () => {
   return (
     <section id="contact" className="section">
-      <footer >
-        <div className="container">
+      <div className="container">
+        
+        {/* Contenedor centrado para el contenido de contacto */}
+        <div className="max-w-3xl mx-auto text-center">
+          
+          <h2 className="headline-1 mb-8 mx-auto">
+            Contactame
+          </h2>
+          
+          <p className="text-zinc-400 text-lg mb-12 mx-auto max-w-[60ch]">
+            ¿Tienes un proyecto en mente o una oportunidad laboral? 
+            Estoy siempre dispuesto a escuchar y colaborar en nuevos desafíos. ¡Contáctame!
+          </p>
 
-          <div className="lg:grid lg:grid-cols-2">
-            <div className="mb-10">
-              <h2 className="headline-1">
-                Contactame!
+          {/* Grid de tarjetas de redes sociales */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center">
+            {socials.map(({ label, href, icon, username }, key) => (
+              <a
+                key={key}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                // Ajustamos las clases para que las tarjetas se vean bien centradas
+                className="flex flex-col items-center p-6 rounded-2xl bg-zinc-800/50 hover:bg-zinc-800 ring-1 ring-inset ring-zinc-50/5 transition-all duration-300 group hover:scale-[1.02] text-center"
+              >
+                <div className="w-14 h-14 rounded-full bg-zinc-900 grid place-items-center text-2xl text-zinc-400 group-hover:text-sky-400 group-hover:bg-zinc-950 transition-colors ring-1 ring-zinc-50/10 mb-4">
+                  {icon}
+                </div>
+                
+                <p className="text-zinc-400 text-xs font-medium tracking-wider mb-2 uppercase">
+                  {label}
+                </p>
+                
+                {/* Ocultamos el username en móviles muy pequeños para que no rompa el diseño */}
+                <p className="text-zinc-100 font-medium group-hover:text-sky-300 transition-colors text-sm truncate w-full px-2">
+                  {username}
+                </p>
 
-              </h2>
-
-
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 lg:pl-20">
-
-              <div>
-                <p className="mb-2 text-4xl font-medium">Redes</p>
-
-                <ul>
-                  {socials.map(({ label, href }, key) => (
-                    <li key={key}>
-                      <a
-                        href={href}
-                        className="text-lg block text-zinc-400 py-1 transition-colors hover:text-zinc-200"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-
-                <p className="mb-2 text-4xl font-medium">Secciones</p>
-
-                <ul>
-                  {sitemap.map(({ label, href }, key) => (
-                    <li key={key}>
-                      <a href={href} className="block text-lg text-zinc-400 py-1 transition-colors hover:text-zinc-200">{label}</a>
-                    </li>
-
-                  ))}
-                </ul>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="flex items-center justify-between pt-10 mb-8">
-            <a href="" className="">
-              <img src="/images/logo.svg" width={40} height={40} alt="Logo" />
-            </a>
-
-            <p className="text-zinc-500 text-sm">&copy; 2025 <span className="text-zinc-200">Danel Torchiari</span></p>
+                <span className="material-symbols-rounded text-zinc-500 group-hover:text-zinc-200 transition-colors mt-4">
+                  arrow_outward
+                </span>
+              </a>
+            ))}
           </div>
 
         </div>
-      </footer>
+      </div>
     </section>
   );
 };
