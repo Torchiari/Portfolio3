@@ -35,15 +35,15 @@ const works = [
         'React Router'
     ]
   },
-//   {
-//     imgSrc: '/images/project-2.jpg',
-//     title: 'E-commerce App',
-//     tags: ['React', 'Redux'],
-//     projectLink: 'https://tu-tienda.com',
-//     repoLink: 'https://github.com/Torchiari/tu-repo-2',
-//     description: 'Aplicación de comercio electrónico con carrito de compras persistente, filtrado de productos y pasarela de pago simulada. Utilicé React para la interfaz y Redux Toolkit para el manejo del estado global de la aplicación.',
-//     technologies: ['React', 'Redux Toolkit', 'Stripe API', 'Firebase']
-//   },
+  {
+    imgSrc: '/images/iconnect.png', 
+    title: 'iConnect - E-commerce Full Stack',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
+    projectLink: 'https://proyecto4-zeta.vercel.app',
+    repoLink: 'https://github.com/Torchiari/Proyecto4',
+    description: 'Plataforma de comercio electrónico Full Stack con arquitectura cliente-servidor separada. Cuenta con autenticación segura (JWT), carrito de compras dinámico, dashboard de usuario con historial de pedidos y base de datos relacional en la nube. Desarrollado con buenas prácticas y tipado estricto.',
+    technologies: ['Next.js 15', 'React', 'TypeScript', 'Node.js', 'Express', 'TypeORM', 'PostgreSQL (Supabase)', 'Tailwind CSS']
+  },
 //   {
 //     imgSrc: '/images/project-3.jpg',
 //     title: 'Portfolio Personal',
