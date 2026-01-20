@@ -44,15 +44,25 @@ const works = [
     description: 'Plataforma de comercio electrónico Full Stack con arquitectura cliente-servidor separada. Cuenta con autenticación segura (JWT), carrito de compras dinámico, dashboard de usuario con historial de pedidos y base de datos relacional en la nube. Desarrollado con buenas prácticas y tipado estricto.',
     technologies: ['Next.js 15', 'React', 'TypeScript', 'Node.js', 'Express', 'TypeORM', 'PostgreSQL (Supabase)', 'Tailwind CSS']
   },
-//   {
-//     imgSrc: '/images/project-3.jpg',
-//     title: 'Portfolio Personal',
-//     tags: ['Web Design', 'Development'],
-//     projectLink: 'https://daneltorchiari.com',
-//     repoLink: 'https://github.com/Torchiari/portfolio',
-//     description: 'Este mismo portafolio. Diseñado para mostrar mis habilidades y proyectos. Enfocado en el rendimiento, accesibilidad y un diseño moderno "Dark Mode" utilizando las últimas características de Tailwind CSS.',
-//     technologies: ['React', 'TailwindCSS', 'Framer Motion', 'Vite']
-//   },
+{
+    imgSrc: '/images/core-preview.png',
+    title: 'Plataforma de Gestión de Gimnasios',
+    tags: ['Full Stack', 'PostgreSQL', 'Mobile First', 'Payments'],
+    projectLink: 'https://core-lake-theta.vercel.app/home',
+    repoLink: 'https://github.com/Torchiari/core',
+    featured: true, 
+    description: 'Mi proyecto más ambicioso y destacado hasta la fecha, al que mayor tiempo de desarrollo y cantidad de implementaciones he dedicado. Es una solución integral para gimnasios que cuenta con un sistema de roles (Admin, Entrenador, Socio) y bloqueo automático de contenido según el estado de la membresía. Integra pagos en tiempo real con Mercado Pago, gestión de rutinas personalizada, base de datos de ejercicios y perfiles de usuario con persistencia segura. Diseñado Mobile-First para ser el compañero ideal de entrenamiento.',
+    technologies: [
+      'Next.js 15', 
+      'NestJS', 
+      'TypeScript', 
+      'PostgreSQL', 
+      'TypeORM', 
+      'Tailwind CSS', 
+      'Mercado Pago', 
+      'Cloudinary'
+    ]
+  },
 ];
 
 export default works;

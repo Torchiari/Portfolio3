@@ -6,13 +6,27 @@ const ProjectCard = ({
     tags,
     projectLink,
     classes,
-    onClick // Recibimos la función para abrir el modal
+    onClick, 
+    featured
 }) => {
     return (
         <div 
             onClick={onClick}
-            className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors cursor-pointer " + classes}
+            className={`
+                relative p-4 rounded-2xl bg-zinc-800 transition-colors cursor-pointer
+                ${classes || ''}
+                ${featured 
+                    ? 'ring-2 ring-yellow-500/50 bg-zinc-800/90 shadow-[0_0_20px_rgba(234,179,8,0.15)]' 
+                    : 'hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5'
+                }
+            `}
         >
+            {featured && (
+                <div className="absolute top-3 right-3 bg-yellow-500 text-zinc-950 text-[10px] uppercase tracking-wide font-bold px-2 py-1 rounded flex items-center gap-1 z-10 shadow-lg pointer-events-none">
+                    <span aria-hidden="true">⭐</span> Destacado
+                </div>
+            )}
+
             <figure className="img-box aspect-square rounded-lg mb-4">
                 <img 
                     src={imgSrc} 
@@ -40,7 +54,7 @@ const ProjectCard = ({
                     </div>
                 </div>
 
-                <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0">
+                <div className={`w-11 h-11 rounded-lg grid place-items-center shrink-0 ${featured ? 'bg-yellow-500 text-zinc-950' : 'bg-sky-400 text-zinc-950'}`}>
                     <span 
                         className="material-symbols-rounded"
                         aria-hidden="true"
@@ -50,13 +64,12 @@ const ProjectCard = ({
                 </div>
             </div>
 
-            {/* Este enlace es solo semántico para accesibilidad, el click lo maneja el div padre */}
             <a 
                 href={projectLink} 
                 target="_blank" 
                 rel="noreferrer"
                 className="absolute inset-0"
-                onClick={(e) => e.preventDefault()} // Prevenimos la navegación directa para abrir el modal
+                onClick={(e) => e.preventDefault()} 
             >
                 <span className="sr-only">Ver detalles de {title}</span>
             </a>
@@ -70,7 +83,8 @@ ProjectCard.propTypes = {
     tags: PropTypes.array.isRequired,
     projectLink: PropTypes.string,
     classes: PropTypes.string,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    featured: PropTypes.bool
 }
 
 export default ProjectCard;

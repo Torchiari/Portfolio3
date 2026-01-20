@@ -21,14 +21,13 @@ const Work = () => {
                             title={project.title}
                             tags={project.tags}
                             projectLink={project.projectLink}
-                            // Pasamos la función para abrir el modal con este proyecto específico
+                            featured={project.featured} 
                             onClick={() => setSelectedProject(project)}
                         />
                     ))}
                 </div>
             </div>
 
-            {/* Renderizado condicional del Modal */}
             {selectedProject && (
                 <ProjectModal 
                     project={selectedProject} 
