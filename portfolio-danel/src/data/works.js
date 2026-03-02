@@ -21,7 +21,7 @@ const works = [
     imgSrc: '/images/englishwithcami-preview.png',
     title: 'English with Cami',
     tags: ['React', 'Tailwind CSS', 'Google API'],
-    projectLink: 'https://englishwithcami.vercel.app/',
+    projectLink: 'https://englishwithcami.com.ar/',
     repoLink: 'https://github.com/Torchiari/englishwithcami',
     description: 'Plataforma educativa web diseñada para la promoción y gestión de clases de inglés personalizadas. El núcleo del proyecto es un sistema de agenda sincronizado en tiempo real mediante la API de Google Calendar, implementado con FullCalendar. Esto permite a los estudiantes visualizar la disponibilidad exacta de la profesora y los horarios libres para agendar sesiones según su nivel y modalidad. La interfaz, construida con React y TailwindCSS v4, ofrece una navegación fluida entre los diferentes cursos y propuestas educativas.',
     technologies: [
